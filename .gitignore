@@ -1,3 +1,6 @@
-mysql
 .DS_Store
 .idea
+
+/mysql
+/nginx/certs/*.pem
+/wordpress/*

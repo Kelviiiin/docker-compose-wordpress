@@ -21,7 +21,7 @@ services:
       - wordpress
 
   mysql:
-    image: mysql:5.7.29
+    image: mysql:latest
     container_name: mysql
     restart: always
     ports:
@@ -33,6 +33,8 @@ services:
       MYSQL_ROOT_PASSWORD: secret
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
+    volumes:
+      - ./mysql:/var/lib/mysql
     networks:
       - wordpress
 
